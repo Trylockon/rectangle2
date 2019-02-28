@@ -2,6 +2,8 @@ import org.apache.log4j.Logger;
 
 import java.util.Objects;
 
+
+//Developed by Kirill on the 28th of February 2019
 public class Rectangle {
     private int a;
     private int b;
