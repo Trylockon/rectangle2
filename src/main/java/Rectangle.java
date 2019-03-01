@@ -44,8 +44,8 @@ public class Rectangle {
                 ", Area="+ getArea() +
                 ", Alpha="+getAlpha() +
                 ", Beta="+getBeta() +
-                ",Gama="+getGamma() +
-                "Is Isosceles:" + isIsosceles()+
+                ", Gama="+getGamma() +
+                ", Is Isosceles:" + isIsosceles()+
                 '}';
     }
 
@@ -63,59 +63,51 @@ public class Rectangle {
         return this.a*this.b+this.a*this.b;
     }
 
-    public int getArea()
-    {
+    public int getArea(){
         int res = this.a*this.b;
         logger.info(res);
         return res;
     }
-    public  int getPerimeter()
-    {
+    public  int getPerimeter(){
         int res = 2*(this.a+this.b);
         logger.info(res);
         return  res;
     }
-    public int getC()
-    {
+    public int getC(){
         int res = this.a+this.b;
         logger.info(res);
         this.c = res;
         return c;
     }
-    public int getAlpha()
-    {
+    public int getAlpha(){
         if(this.c == 0)
             getC();
         int res = ((this.a*this.a)+(this.c*this.c)-(this.b*this.b))/(2*this.b*this.c);
         logger.info(res);
         return res;
 }
-    public int getBeta()
-    {
+    public int getBeta(){
         if(this.c == 0)
             getC();
         int res = ((this.a*this.a)+(this.c*this.c)-(this.b*this.b))/(2*this.a*this.c);
         logger.info(res);
         return res;
     }
-    public int getGamma()
-    {
+    public int getGamma(){
         if(this.c == 0)
             getC();
         int res = ((this.a*this.a)+(this.b*this.b)-(this.c*this.c))/(2*this.a*this.b);
         logger.info(res);
         return res;
     }
-    public int getHeight()
-    {
+    public int getHeight(){
         if(this.c == 0)
             getC();
         int res = this.b / (this.c/2);
         logger.info(res);
         return res;
     }
-    public boolean isIsosceles()
-    {
+    public boolean isIsosceles(){
         if(this.a==this.b) {
             logger.info("true");
             return true;
